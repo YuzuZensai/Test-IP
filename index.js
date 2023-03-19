@@ -5,7 +5,7 @@ app.get("/", (req, res) => {
     const ip = req.headers["x-forwarded-for"] || req.socket.remoteAddress;
 
     let data = "";
-    data = `IP Address: ${ip}`;
+    data = `IP: ${ip}\n`;
 
     for (let key in req.headers) {
         data += `${key}: ${req.headers[key]}`;
