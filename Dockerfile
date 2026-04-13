@@ -1,9 +1,8 @@
-FROM node:18 as build
+FROM oven/bun:1 as build
 WORKDIR /home/node/app
 
 COPY . .
 
-RUN apt-get update -y
-RUN yarn
+RUN bun install
 
-CMD ["node", "index.js"]
+CMD ["bun", "run", "src/index.ts"]

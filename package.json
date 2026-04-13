@@ -1,10 +1,17 @@
 {
-    "dependencies": {
-        "express": "^4.18.2"
-    },
+    "name": "ip-test",
+    "type": "module",
     "scripts": {
-        "docker-build": "docker build . -t ghcr.io/yuzuzensai/iptest:latest",
-        "docker-run": "docker run -d --name iptest --network host ghcr.io/yuzuzensai/iptest:latest",
-        "docker-push": "docker push ghcr.io/yuzuzensai/iptest:latest"
+        "start": "bun run src/index.ts",
+        "dev": "bun --hot src/index.ts",
+        "test": "bun test",
+        "check": "biome check .",
+        "fix": "biome check --write ."
+    },
+    "dependencies": {
+        "elysia": "latest"
+    },
+    "devDependencies": {
+        "@biomejs/biome": "latest"
     }
 }
