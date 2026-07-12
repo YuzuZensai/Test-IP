@@ -26,7 +26,7 @@ const app = new Elysia()
 
         return data;
     })
-    .listen({ port: 3000, host: "0.0.0.0" });
+    .listen({ port: 3000, hostname: "0.0.0.0" });
 
 console.log("Listening on port 3000");
 
