@@ -1,6 +1,6 @@
 import { Elysia } from "elysia";
 
-const app = new Elysia()
+new Elysia()
     .get("/", ({ server, request }) => {
         const ip = server?.requestIP(request);
         const ipStr = ip ? (typeof ip === "object" ? ip.address : ip) : "unknown";
@@ -26,8 +26,6 @@ const app = new Elysia()
 
         return data;
     })
-    .listen({ port: 3000, hostname: "0.0.0.0" });
+    .listen(3000);
 
 console.log("Listening on port 3000");
-
-export default app;
