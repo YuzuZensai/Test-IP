@@ -1,6 +1,6 @@
-# IP Test
+# 🌐 IP Test
 
-🌐 Minimal HTTP server that echoes your IP and request headers as HTML or JSON.
+Minimal HTTP server that echoes your IP and request headers as HTML or JSON.
 
 Built with [Elysia](https://elysiajs.com/) on [Bun](https://bun.sh/).
 
